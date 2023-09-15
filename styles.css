@@ -26,6 +26,7 @@ nav li a {
 
 span {
     color: orange;
+    font-weight: bold;
 }
 
 .active {
@@ -66,6 +67,31 @@ nav li a:hover {
     width: 100%;
 }
 
+.slider-box-mini{
+    width: 400%;
+    height: auto;
+    margin: 2.5rem auto;
+    overflow: hidden;
+}
+
+.slider-box-mini ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box-mini li{
+    width: 100%;
+    position: relative;
+}
+
+.slider-box-mini img{
+    width: 100%;
+    border: solid 1px #000;
+    border-radius: 1rem;
+}
+
 @keyframes slide{
     0%{
         margin-left: 0;
@@ -94,4 +120,84 @@ nav li a:hover {
     100%{
         margin-left: -300%;
     }
+}
+
+.contenido{
+    width: 80vw;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.p-l{
+    padding-left: 2rem;
+}
+
+.sub-titulo{
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 4rem;
+    width: 80vw;
+    margin: 2.5rem auto;
+}
+
+.card {
+    position: relative;
+    width: 90%;
+    height: 200px;
+    max-width: 300px; /* o el ancho deseado */
+    margin: 0 auto;
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;/* Fondo semitransparente para hacer el texto legible */
+    color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para los elementos de texto */
+    grid-gap: 5px; /* Espacio entre los elementos de texto */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.text h3,
+.text a {
+    margin: 0;
+    text-align: center; /* Centra horizontalmente los elementos de texto */
+}
+
+.text a {
+    transition: 0.5s;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: orange;
+    color: white;
+}
+
+.text a:hover {
+    color: orange;
+    background: white;
+    border: 1px solid #000;
 }
